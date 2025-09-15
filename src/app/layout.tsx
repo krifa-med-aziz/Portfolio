@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "aos/dist/aos.css";
+import AOSProvider from "@/components/AOSProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -20,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased relative min-h-screen`}>
-        {children}
+        <AOSProvider>{children}</AOSProvider>
       </body>
     </html>
   );
