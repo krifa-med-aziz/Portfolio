@@ -32,7 +32,7 @@ export default function About() {
                   Med Aziz Krifa
                 </span>
               </h3>
-              <p className="text-[#8b949e] leading-relaxed text-sm md:text-base mb-3">
+              <div className="text-[#8b949e] leading-relaxed text-sm md:text-base mb-3">
                 I&apos;m a passionate{" "}
                 <span className="text-[#8b5cf6] font-semibold">
                   Fullstack Software Engineer Student{" "}
@@ -50,7 +50,7 @@ export default function About() {
                 With a strong foundation in web development, my journey in tech
                 has since expanded to include both frontend and backend
                 technologies.
-              </p>
+              </div>
               <p className="text-[#8b949e] leading-relaxed text-sm md:text-base">
                 Beyond my studies, I actively engage within the tech community
                 through{" "}
