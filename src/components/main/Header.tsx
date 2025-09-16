@@ -5,6 +5,7 @@ import { TextAlignJustify, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLenis } from "@/lib/lenis";
 
 type Tactive = "home" | "about" | "contact" | "projects" | "skills";
 const navLinks: { label: string; href: string; value: Tactive }[] = [
@@ -18,12 +19,13 @@ const navLinks: { label: string; href: string; value: Tactive }[] = [
 export default function Header() {
   const [active, setActive] = useState<Tactive>("home");
   const [isOpen, setisOpen] = useState(false);
+  const lenis = useLenis();
 
   const scrollToSection = (id: Tactive) => {
     const element = document.getElementById(id);
     setActive(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    if (element && lenis) {
+      lenis.scrollTo(element);
     }
   };
 
@@ -88,7 +90,10 @@ export default function Header() {
                   <Link
                     key={link.value}
                     href={link.href}
-                    onClick={() => scrollToSection(link.value)}
+                    onClick={() => {
+                      scrollToSection(link.value);
+                      setisOpen(false);
+                    }}
                     className={cn(
                       "hover:text-violet-500 transition p-2 rounded-2xl w-full text-center",
                       active === link.value &&

@@ -5,10 +5,12 @@ import Header from "@/components/main/Header";
 import Hero from "@/components/main/Hero";
 import Projects from "@/components/main/Projects";
 import Skills from "@/components/main/Skills";
+import BackToTopButton from "@/components/BackToTopButton";
 
 export default function Home() {
   return (
     <>
+      <BackToTopButton />
       <Header />
       <main>
         <Hero />
