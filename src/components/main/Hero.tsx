@@ -13,15 +13,14 @@ import { useLenis } from "@/lib/lenis";
 export default function Hero() {
   const lenis = useLenis();
 
-  const handleViewWork = (e: React.MouseEvent) => {
-    e.preventDefault();
+  const handleViewWork = () => {
     scrollToSection("projects", lenis);
   };
 
-  const handleContact = (e: React.MouseEvent) => {
-    e.preventDefault();
+  const handleContact = () => {
     scrollToSection("contact", lenis);
   };
+
   return (
     <section id="home" className="bg-[#0d1117] w-full min-h-screen relative">
       <div
@@ -77,12 +76,12 @@ export default function Hero() {
             full stack frameworks.
           </p>
           <div className="flex flex-wrap gap-3 sm:gap-4 justify-center md:justify-start pt-2 sm:pt-4">
-            <Button className="z-500" onClick={handleViewWork}>
+            <Button className="relative z-300" onClick={handleViewWork}>
               <span>View My Work</span>
               <ArrowRight className="group-hover:translate-x-1 transform transition-all duration-300" />
             </Button>
             <Button
-              className="z-500"
+              className="relative z-300"
               variant={"secondary"}
               onClick={handleContact}
             >

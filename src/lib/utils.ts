@@ -20,8 +20,18 @@ export function scrollToSection(
   }
 
   if (element) {
-    if (lenis) {
-      lenis.scrollTo(element);
+    if (lenis && lenis.scrollTo) {
+      // Use Lenis if available and ready
+      lenis.scrollTo(element, { duration: 1.2 });
+    } else {
+      // Fallback to native smooth scroll
+      const headerHeight = 100;
+      const elementPosition = element.offsetTop - headerHeight;
+
+      window.scrollTo({
+        top: elementPosition,
+        behavior: "smooth",
+      });
     }
   }
 }

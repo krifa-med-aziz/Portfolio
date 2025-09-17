@@ -13,6 +13,7 @@ export default function HeroImage() {
             alt="my-photo"
             width={312}
             height={312}
+            priority
             className="w-full group-hover:scale-105 transition-transform duration-700"
           />
         </div>
