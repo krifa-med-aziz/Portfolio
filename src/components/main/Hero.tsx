@@ -7,8 +7,19 @@ import HeroImage from "../HeroImage";
 import Image from "next/image";
 import { technologies } from "@/lib/data";
 import { motion } from "framer-motion";
+import { scrollToSection } from "@/lib/utils";
+import { useLenis } from "@/lib/lenis";
 
 export default function Hero() {
+  const lenis = useLenis();
+
+  const handleViewWork = () => {
+    scrollToSection("projects", lenis);
+  };
+
+  const handleContact = () => {
+    scrollToSection("contact", lenis);
+  };
   return (
     <section id="home" className="bg-[#0d1117] w-full min-h-screen relative">
       <div
@@ -64,11 +75,13 @@ export default function Hero() {
             full stack frameworks.
           </p>
           <div className="flex flex-wrap gap-3 sm:gap-4 justify-center md:justify-start pt-2 sm:pt-4">
-            <Button>
+            <Button onClick={handleViewWork}>
               <span>View My Work</span>
               <ArrowRight className="group-hover:translate-x-1 transform transition-all duration-300" />
             </Button>
-            <Button variant={"secondary"}>Contact Me</Button>
+            <Button variant={"secondary"} onClick={handleContact}>
+              Contact Me
+            </Button>
           </div>
           <div className="mt-5 flex flex-col gap-3 sm:gap-4 pt-4 sm:pt-6">
             <p className="text-xs sm:text-sm text-[#8A939D] font-medium text-center md:text-left">

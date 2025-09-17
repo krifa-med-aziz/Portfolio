@@ -15,3 +15,21 @@ export type TechSkill = {
   description: string;
   technologies: { icon: IconType; label: string }[];
 };
+
+export type TCareer = {
+  id: string;
+  title: string;
+  company: string;
+  location: string;
+  startDate: string;
+  endDate: string;
+  description?: string;
+};
+
+export type TAchievement = {
+  id: string;
+  title: string;
+  company: string;
+  date: string;
+  link: string;
+};

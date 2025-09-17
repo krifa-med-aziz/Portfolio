@@ -29,7 +29,7 @@ import {
 } from "react-icons/ri";
 import { IoLogoFigma, IoLogoVercel } from "react-icons/io5";
 import { AiFillCode } from "react-icons/ai";
-import { TechSkill, TProjects } from "./types";
+import { TAchievement, TCareer, TechSkill, TProjects } from "./types";
 import { FaFigma } from "react-icons/fa6";
 
 export const technologies = [
@@ -437,5 +437,91 @@ export const techStacks: TechSkill[] = [
         label: "Netlify",
       },
     ],
+  },
+];
+
+export const educations: TCareer[] = [
+  {
+    id: crypto.randomUUID(),
+    title: "Baccalaureate in Experimental Sciences",
+    company: "Rejiche, High School",
+    location: "Mahdia, Tunisia",
+    startDate: "2022",
+    endDate: "2023",
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Engineer's Degree in Software Engineering",
+    company: "Higher Institute of Applied Sciences and Technology of Sousse",
+    location: "Sousse, Tunisia",
+    startDate: "2023",
+    endDate: "2028",
+    description:
+      "Relevant courses include: Algorithms and Data Structures, Computer Architecture, Software Architecture, Design Patterns, Advanced Databases, Networking, Data Transmission, Algebra, Calculus, Physics, Signal Mathematics, Engineering Mathematics, Cuda Programming.",
+  },
+];
+export const experiences: TCareer[] = [
+  {
+    id: crypto.randomUUID(),
+    title: "Front-End Developer Intern",
+    company: "TEAMDEV",
+    location: "Sousse, Tunisia",
+    startDate: "Aug 2025",
+    endDate: "Aug 2025",
+    description:
+      "I built a dynamic customer satisfaction survey application using React and TypeScript, designed to deliver an engaging and responsive user experience. The app supports multiple question types, real-time validation, and progress tracking, ensuring users can easily complete surveys with clarity and precision. Its clean and modular component architecture highlights modern React patterns, while Tailwind CSS and React Hook Form power the responsive UI and smooth interactions. This project reflects my ability to combine strong technical implementation with thoughtful design to create scalable and user-friendly web applications.",
+  },
+];
+
+export const certifications: TAchievement[] = [
+  {
+    id: crypto.randomUUID(),
+    link: "https://scrimba.com/certificate-cert29m6qiCosF7cEipSW7SZsPyykdoFYiBsthYYATGAEu4fL",
+    title: "Command Line Basics",
+    company: "Scrimba",
+    date: "Jun 2025",
+  },
+  {
+    id: crypto.randomUUID(),
+    link: "https://scrimba.com/certificate-cert29m6qiCosF7cEipSW7SZs9evK5c3EbsFbJfEx5P3hHRnJ",
+    title: "Learn NEXT.JS",
+    company: "Scrimba",
+    date: "Aug 2025",
+  },
+  {
+    id: crypto.randomUUID(),
+    link: "https://scrimba.com/certificate-cert2uNjfKA22APmj6dbfvwzMcJ16EUQGM2q2Jk",
+    title: "The Frontend Developer Career Path",
+    company: "Scrimba",
+    date: "Apr 2025",
+  },
+  {
+    id: crypto.randomUUID(),
+    link: "https://www.udemy.com/certificate/UC-fa8600bf-aa58-427f-b13d-e843c5b628f6/",
+    title: "The Complete JavaScript Course 2025: From Zero to Expert!",
+    company: "Udemy",
+    date: "Mar 2025",
+  },
+  {
+    id: crypto.randomUUID(),
+    link: "https://www.datacamp.com/completed/statement-of-accomplishment/track/060c050009a110224ca983970cee914320d2c245",
+    title: "GitHub Foundations",
+    company: "DataCamp",
+    date: "Jan 2025",
+  },
+  {
+    id: crypto.randomUUID(),
+    link: "https://www.linkedin.com/learning/certificates/a31ecb733e67d01e5d49577a92f8926fd519497f57add4b4d5a166b5a956b45c?trk=share_certificate",
+    title: "Illustrator 2024 Essential Training",
+    company: "LinkedIn",
+    date: "Jan 2025",
+  },
+];
+export const volunteering: Omit<TAchievement, "link">[] = [
+  {
+    id: crypto.randomUUID(),
+    title: "Marketing Committee member",
+    company: "Google Developer Student Clubs Issatso",
+    date: "Oct 2024 - Present",
   },
 ];

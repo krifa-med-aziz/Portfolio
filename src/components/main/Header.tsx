@@ -1,13 +1,13 @@
 "use client";
 import { socialLinks } from "@/lib/data";
-import { cn } from "@/lib/utils";
+import { cn, scrollToSection, SectionId } from "@/lib/utils";
 import { TextAlignJustify, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLenis } from "@/lib/lenis";
 
-type Tactive = "home" | "about" | "contact" | "projects" | "skills";
+type Tactive = SectionId;
 const navLinks: { label: string; href: string; value: Tactive }[] = [
   { label: "Home", href: "/", value: "home" },
   { label: "About", href: "#about", value: "about" },
@@ -21,12 +21,8 @@ export default function Header() {
   const [isOpen, setisOpen] = useState(false);
   const lenis = useLenis();
 
-  const scrollToSection = (id: Tactive) => {
-    const element = document.getElementById(id);
-    setActive(id);
-    if (element && lenis) {
-      lenis.scrollTo(element);
-    }
+  const handleScrollToSection = (id: Tactive) => {
+    scrollToSection(id, lenis, setActive);
   };
 
   return (
@@ -49,7 +45,7 @@ export default function Header() {
               <Link
                 key={link.value}
                 href={link.href}
-                onClick={() => scrollToSection(link.value)}
+                onClick={() => handleScrollToSection(link.value)}
                 className={cn(
                   "hover:text-violet-500 transition p-2 rounded-2xl",
                   active === link.value && "text-violet-500 bg-violet-400/10"
@@ -91,7 +87,7 @@ export default function Header() {
                     key={link.value}
                     href={link.href}
                     onClick={() => {
-                      scrollToSection(link.value);
+                      handleScrollToSection(link.value);
                       setisOpen(false);
                     }}
                     className={cn(
