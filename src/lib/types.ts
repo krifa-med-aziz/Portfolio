@@ -9,7 +9,7 @@ export type TProjects = {
   github: string;
   demo: string;
 };
-export type Skill = {
+export type TechSkill = {
   icon: IconType;
   title: string;
   description: string;

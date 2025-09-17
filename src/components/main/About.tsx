@@ -127,26 +127,6 @@ export default function About() {
             </div>
           </div>
         </div>
-        {/* Technical skills */}
-        <div data-aos="fade-up" className="mb-16 md:mb-20 aos-init aos-animate">
-          <h3 className="text-xl md:text-2xl font-bold text-sky-100 mb-6 md:mb-8 text-center">
-            Technical Skills
-          </h3>
-          <div className="flex flex-wrap justify-center gap-3 md:gap-4">
-            <span className="px-4 py-1.5 md:px-5 md:py-2 text-xs md:text-sm font-medium bg-[#8b5cf6]/10 text-[#8b5cf6] rounded-full border border-[#8b5cf6]/20 hover:bg-[#8b5cf6]/20 transition">
-              React &amp; Next.js
-            </span>
-            <span className="px-4 py-1.5 md:px-5 md:py-2 text-xs md:text-sm font-medium bg-[#8b5cf6]/10 text-[#8b5cf6] rounded-full border border-[#8b5cf6]/20 hover:bg-[#8b5cf6]/20 transition">
-              JavaScript / TypeScript
-            </span>
-            <span className="px-4 py-1.5 md:px-5 md:py-2 text-xs md:text-sm font-medium bg-[#8b5cf6]/10 text-[#8b5cf6] rounded-full border border-[#8b5cf6]/20 hover:bg-[#8b5cf6]/20 transition">
-              Tailwind CSS
-            </span>
-            <span className="px-4 py-1.5 md:px-5 md:py-2 text-xs md:text-sm font-medium bg-[#8b5cf6]/10 text-[#8b5cf6] rounded-full border border-[#8b5cf6]/20 hover:bg-[#8b5cf6]/20 transition">
-              Supabase / REST APIs
-            </span>
-          </div>
-        </div>
         {/* Development Philosophy */}
         <div data-aos="fade-up" className="aos-init aos-animate">
           <h3 className="text-xl md:text-2xl font-bold text-sky-100 mb-6 md:mb-8 text-center">

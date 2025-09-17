@@ -7,11 +7,14 @@ import {
   FaReact,
   FaDatabase,
   FaGitAlt,
+  FaPenNib,
+  FaUsers,
 } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { IoLogoJavascript } from "react-icons/io";
 import {
   SiEslint,
+  SiNetlify,
   SiPrettier,
   SiPrisma,
   SiStyledcomponents,
@@ -26,7 +29,8 @@ import {
 } from "react-icons/ri";
 import { IoLogoFigma, IoLogoVercel } from "react-icons/io5";
 import { AiFillCode } from "react-icons/ai";
-import { Skill, TProjects } from "./types";
+import { TechSkill, TProjects } from "./types";
+import { FaFigma } from "react-icons/fa6";
 
 export const technologies = [
   {
@@ -66,7 +70,7 @@ export const socialLinks = [
   },
 ];
 
-export const skills: Skill[] = [
+export const skills: TechSkill[] = [
   {
     icon: FaReact,
     title: "Front-End Development",
@@ -321,5 +325,117 @@ export const projects: TProjects[] = [
     technologies: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/krifa-med-aziz/Mapty-App",
     demo: "",
+  },
+];
+
+export const techStacks: TechSkill[] = [
+  {
+    icon: RiNextjsFill,
+    title: "Next.js",
+    description: "Framework for building modern, scalable, and fast web apps.",
+    technologies: [
+      {
+        icon: FaReact,
+        label: "React",
+      },
+      {
+        icon: SiTypescript,
+        label: "TypeScript",
+      },
+
+      {
+        icon: RiTailwindCssFill,
+        label: "Tailwind CSS",
+      },
+    ],
+  },
+  {
+    icon: FaReact,
+    title: "React",
+    description:
+      "Component-based UI library for building interactive interfaces.",
+    technologies: [
+      {
+        icon: FaReact,
+        label: "Hooks",
+      },
+      {
+        icon: FaReact,
+        label: "Context API",
+      },
+
+      {
+        icon: IoLogoJavascript,
+        label: "JavaScript",
+      },
+    ],
+  },
+  {
+    icon: SiTypescript,
+    title: "TypeScript",
+    description: "A strongly typed superset of JavaScript for scalable apps.",
+    technologies: [
+      {
+        icon: IoLogoJavascript,
+        label: "OOP",
+      },
+      {
+        icon: IoLogoJavascript,
+        label: "Generics",
+      },
+    ],
+  },
+  {
+    icon: RiTailwindCssFill,
+    title: "Tailwind CSS",
+    description: "Utility-first CSS framework for rapid UI development.",
+    technologies: [
+      {
+        icon: FaCss3Alt,
+        label: "Responsive design",
+      },
+      {
+        icon: FaCss3Alt,
+        label: "Dark Mode",
+      },
+      {
+        icon: FaHtml5,
+        label: "HTML",
+      },
+    ],
+  },
+  {
+    icon: FaFigma,
+    title: "Figma",
+    description: "Design and prototyping tool for modern interfaces.",
+    technologies: [
+      {
+        icon: FaPenNib,
+        label: "UI/UX Design",
+      },
+      {
+        icon: FaUsers,
+        label: "Collaboration",
+      },
+    ],
+  },
+  {
+    icon: FaGitAlt,
+    title: "Git & Deployment",
+    description: "Version control and hosting for smooth collaboration.",
+    technologies: [
+      {
+        icon: FaGithub,
+        label: "GitHub",
+      },
+      {
+        icon: IoLogoVercel,
+        label: "Vercel",
+      },
+      {
+        icon: SiNetlify,
+        label: "Netlify",
+      },
+    ],
   },
 ];
