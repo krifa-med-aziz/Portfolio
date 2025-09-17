@@ -13,17 +13,19 @@ import { useLenis } from "@/lib/lenis";
 export default function Hero() {
   const lenis = useLenis();
 
-  const handleViewWork = () => {
+  const handleViewWork = (e: React.MouseEvent) => {
+    e.preventDefault();
     scrollToSection("projects", lenis);
   };
 
-  const handleContact = () => {
+  const handleContact = (e: React.MouseEvent) => {
+    e.preventDefault();
     scrollToSection("contact", lenis);
   };
   return (
     <section id="home" className="bg-[#0d1117] w-full min-h-screen relative">
       <div
-        className="z-1"
+        className="z-1 pointer-events-none"
         style={{ width: "100%", height: "100vh", position: "absolute" }}
       >
         <LightRays
@@ -75,11 +77,15 @@ export default function Hero() {
             full stack frameworks.
           </p>
           <div className="flex flex-wrap gap-3 sm:gap-4 justify-center md:justify-start pt-2 sm:pt-4">
-            <Button onClick={handleViewWork}>
+            <Button className="z-500" onClick={handleViewWork}>
               <span>View My Work</span>
               <ArrowRight className="group-hover:translate-x-1 transform transition-all duration-300" />
             </Button>
-            <Button variant={"secondary"} onClick={handleContact}>
+            <Button
+              className="z-500"
+              variant={"secondary"}
+              onClick={handleContact}
+            >
               Contact Me
             </Button>
           </div>

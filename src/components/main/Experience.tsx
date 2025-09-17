@@ -30,7 +30,7 @@ export default function Experience() {
           <button
             onClick={() => setActive("experience")}
             className={cn(
-              "bg-[#10141A] py-2 flex-1 hover:bg-[#10141A]/30 cursor-pointer ",
+              "bg-[#10141A] py-2 flex-1 hover:bg-[#8b5cf6]/10 cursor-pointer ",
               {
                 "bg-[#8b5cf6]/10": active === "experience",
               }
@@ -41,7 +41,7 @@ export default function Experience() {
           <button
             onClick={() => setActive("certificates")}
             className={cn(
-              "bg-[#10141A] py-2 flex-1 hover:bg-[#10141A]/30 cursor-pointer ",
+              "bg-[#10141A] py-2 flex-1 hover:bg-[#8b5cf6]/10 cursor-pointer ",
               {
                 "bg-[#8b5cf6]/10": active === "certificates",
               }
@@ -52,7 +52,7 @@ export default function Experience() {
           <button
             onClick={() => setActive("volunteering")}
             className={cn(
-              "bg-[#10141A] py-2 flex-1 hover:bg-[#10141A]/30 cursor-pointer ",
+              "bg-[#10141A] py-2 flex-1 hover:bg-[#8b5cf6]/10 cursor-pointer ",
               {
                 "bg-[#8b5cf6]/10": active === "volunteering",
               }
