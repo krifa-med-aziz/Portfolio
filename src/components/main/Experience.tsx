@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import SectionHeader from "../SectionHeader";
 import { cn } from "@/lib/utils";
 import { MdWork } from "react-icons/md";
-import { FaGraduationCap } from "react-icons/fa";
+import { FaGraduationCap, FaRegHeart } from "react-icons/fa";
 import {
   certifications,
   educations,
@@ -12,6 +12,7 @@ import {
 } from "@/lib/data";
 import CareerTimeline from "../CareerTimeline";
 import AchievementSpotlight from "../AchievementSpotlight";
+import { GrCertificate } from "react-icons/gr";
 type TActive = "experience" | "certificates" | "volunteering";
 
 export default function Experience() {
@@ -26,39 +27,42 @@ export default function Experience() {
           title="Experience & Education"
           description="My professional journey, certifications, volunteering, and educational background that have shaped my skills and expertise."
         />
-        <div className="w-full flex flex-col sm:flex-row border border-gray-500/30 text-[#8b5cf6] mb-10">
+        <div className="w-full flex gap-1 md:gap-3 py-2.5 px-2  border rounded-md border-gray-500/30 text-violet-300 mb-10">
           <button
             onClick={() => setActive("experience")}
             className={cn(
-              "bg-[#10141A] py-2 flex-1 hover:bg-[#8b5cf6]/10 cursor-pointer ",
+              "bg-[#10141A] py-2 flex-1 flex justify-center items-center gap-3 rounded-md hover:bg-[#8b5cf6]/10 cursor-pointer ",
               {
                 "bg-[#8b5cf6]/10": active === "experience",
               }
             )}
           >
-            Experience & Education
+            <MdWork />
+            <p className="hidden md:block">Experience & Education</p>
           </button>
           <button
             onClick={() => setActive("certificates")}
             className={cn(
-              "bg-[#10141A] py-2 flex-1 hover:bg-[#8b5cf6]/10 cursor-pointer ",
+              "bg-[#10141A] py-2 flex-1 flex justify-center items-center gap-3 rounded-md hover:bg-[#8b5cf6]/10 cursor-pointer ",
               {
                 "bg-[#8b5cf6]/10": active === "certificates",
               }
             )}
           >
-            Certificates
+            <GrCertificate />
+            <p className="hidden md:block">Certificates</p>
           </button>
           <button
             onClick={() => setActive("volunteering")}
             className={cn(
-              "bg-[#10141A] py-2 flex-1 hover:bg-[#8b5cf6]/10 cursor-pointer ",
+              "bg-[#10141A] py-2 flex-1 flex justify-center items-center gap-3 rounded-md hover:bg-[#8b5cf6]/10 cursor-pointer ",
               {
                 "bg-[#8b5cf6]/10": active === "volunteering",
               }
             )}
           >
-            Volunteering
+            <FaRegHeart />
+            <p className="hidden md:block">Volunteering</p>
           </button>
         </div>
         {active === "experience" && (
@@ -94,6 +98,10 @@ export default function Experience() {
         )}
         {active === "certificates" && (
           <div data-aos="zoom-in" className=" aos-init aos-animate mt-10">
+            <h3 className="text-xl sm:text-2xl font-semibold mb-6 md:mb-8 flex items-center text-sky-100 gap-2">
+              <GrCertificate className="text-[#8b5cf6]" />
+              Certificates
+            </h3>
             {certifications.map((certif) => {
               return (
                 <AchievementSpotlight
@@ -107,6 +115,10 @@ export default function Experience() {
         )}
         {active === "volunteering" && (
           <div>
+            <h3 className="text-xl  sm:text-2xl font-semibold mb-6 md:mb-8 flex items-center text-sky-100 gap-2">
+              <FaRegHeart className="text-[#8b5cf6]" />
+              Volunteering
+            </h3>
             {volunteering.map((v) => {
               return (
                 <AchievementSpotlight active={active} key={v.id} item={v} />

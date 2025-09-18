@@ -14,6 +14,7 @@ export default function HeroImage() {
             width={312}
             height={312}
             priority
+            loading="eager"
             className="w-full group-hover:scale-105 transition-transform duration-700"
           />
         </div>

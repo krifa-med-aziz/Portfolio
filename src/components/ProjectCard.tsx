@@ -27,6 +27,7 @@ export default function ProjectCard({
           alt="portfolio"
           height={40}
           width={300}
+          loading="lazy"
           className="object-cover group-hover:scale-105 transition-transform duration-500 absolute w-full h-full inset-0"
         />
       </div>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://devmedazizkrifa.vercel.app/sitemap.xml

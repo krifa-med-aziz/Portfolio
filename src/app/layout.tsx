@@ -9,9 +9,27 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Med Aziz Krifa | Full-stack Web Developer (NextJs + TypeScript)",
+  title: "Med Aziz Krifa | Portfolio",
   description:
-    "This project is my personal portfolio showcasing my work, skills, and experience as a full-stack web developer.",
+    "Portfolio of Med Aziz Krifa, my work, skills, experience and education as a Software Engineering Student.",
+  keywords:
+    "Mohamed Aziz Krifa, Web Developer, React, TypeScript, Next.js, Portfolio,Full Stack,Software Engineer,Student",
+  openGraph: {
+    title: "Med Aziz Krifa | Portfolio",
+    description:
+      "Portfolio of Med Aziz Krifa, my work, skills, experience and education as a Software Engineering Student.",
+    url: "https://devmedazizkrifa.vercel.app/",
+    siteName: "Med Aziz Krifa",
+    images: [
+      {
+        url: "https://devmedazizkrifa.vercel.app/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Med Aziz Krifa Portfolio Preview",
+      },
+    ],
+    type: "website",
+  },
 };
 
 export default function RootLayout({

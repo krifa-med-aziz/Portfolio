@@ -45,6 +45,7 @@ export default function Header() {
               <Link
                 key={link.value}
                 href={link.href}
+                aria-label={link.label}
                 onClick={() => handleScrollToSection(link.value)}
                 className={cn(
                   "hover:text-violet-500 transition p-2 rounded-2xl",

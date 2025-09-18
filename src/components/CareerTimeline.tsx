@@ -9,7 +9,7 @@ type CareerTimelineProps = {
 export default function CareerTimeline({ item }: CareerTimelineProps) {
   return (
     <div className="relative">
-      <div className="absolute -left-[15px] sm:-left-9.5 mt-1 h-2 w-2 sm:h-3 sm:w-3 rounded-full border-4 border-[#8b5cf6] bg-[#8b5cf6] shadow-2xl" />
+      <div className="absolute -left-[28px] sm:-left-9.5 mt-1 h-2 w-2 sm:h-3 sm:w-3 rounded-full border-4 border-[#8b5cf6] bg-[#8b5cf6] shadow-2xl" />
       <div className="mb-2 text-left">
         <h4 className="text-lg sm:text-xl font-semibold text-sky-100">
           {item.title}
